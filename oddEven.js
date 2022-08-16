@@ -1,11 +1,10 @@
 function oddEven(num) {
-  let total = 0;
-  let arr = Array.from(String(num), (num) => Number(num));
-  console.log(num);
-  arr.forEach((x) => {
-    total += x;
-  });
-  if (total >= 0) {
+  if (num >= 0) {
+    let total = 0;
+    let arr = Array.from(String(num), (num) => Number(num));
+    arr.forEach((x) => {
+      total += x;
+    });
     if (total % 2 == 0) {
       console.log(`Total number is: ${total}`);
       console.log("This number is even");
@@ -13,6 +12,8 @@ function oddEven(num) {
       console.log(`Total number is: ${total}`);
       console.log("This number is odd");
     }
+  } else {
+    console.log("Number is less than 0");
   }
 }
 
